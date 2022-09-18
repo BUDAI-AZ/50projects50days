@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #145cc1;
+}
+h1 {
+  text-align: center;
+  font-size: 25px;
+}
+h3 {
+  margin: 50px 0 30px;
+  
+  text-align: start;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.faq {
+  background-color: transparent;
+  border: 1px solid steelblue;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+.faq.active::before,
+.faq.active::after {
+  content: 'btn';
+  color: #22cee2;
+  font-family: 'Font Awesome 5 free';
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+.faq.active::before {
+  color: #3434db;
+  top: -10px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+.title {
+  margin: 0 35px 0 0;
+}
+.text {
+  display: none;
+  margin: 30px 0;
+}
+.faq.active .text {
+  display: block;
+}
+.faq-toggle {
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  font-size: 16px;
+  top: 30px;
+  right: 30px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.faq-toggle:focus {
+  outline: 0;
+}
+.faq.active .faq-toggle .fa-items {
+  color: #fff;
+  display: block;
+}
+.faq.active .faq-toggle {
+  background-color: #44caa1;
+}
+.faq.active .faq-toggle .fa-chevron-down {
+  display: none;
+}
